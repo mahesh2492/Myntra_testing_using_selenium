@@ -1,7 +1,7 @@
 package Selenium
 
 import java.util.concurrent.TimeUnit
-import org.openqa.selenium.By
+import org.openqa.selenium.{WebElement, By}
 import org.openqa.selenium.interactions.Actions
 import org.openqa.selenium.support.ui.ExpectedConditions
 import org.scalatest.FlatSpec
@@ -37,9 +37,9 @@ class CreateCustomTest extends FlatSpec with TestSetUp {
 
     driver.findElementByCssSelector("div.desktop-getUserInLinks.desktop-getInLinks a:nth-child(2)").click()
 
-    driver.findElementByCssSelector("input.login-user-input-email.login-user-input").sendKeys("a123@gmail.com")
+    driver.findElementByCssSelector("input.login-user-input-email.login-user-input").sendKeys("mahes@gmail.com")
 
-    driver.findElementByCssSelector("input.login-user-input-password.login-user-input").sendKeys("123456")
+    driver.findElementByCssSelector("input.login-user-input-password.login-user-input").sendKeys("myntra1")
 
     driver.findElementByCssSelector("button.login-login-button").click()
   }
@@ -60,13 +60,76 @@ class CreateCustomTest extends FlatSpec with TestSetUp {
     driver.findElementByCssSelector("button.login-login-button").click()
   }
 
-  "user" should "select a Casual Shoes category" in {
+  "user" should "select a Sports Shoes category" in {
 
-    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li.navi-base  a.navi-link.navi-pad ")))
+    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("ul.split-navi-list ul:nth-child(7) li.navi-base  a.navi-link.navi-pad")))
 
-    driver.findElementByCssSelector("li.navi-base  a.navi-link.navi-pad ").click()
+    driver.findElementByCssSelector("ul.split-navi-list ul:nth-child(7) li.navi-base  a.navi-link.navi-pad  ").click()
+  }
+
+  "user" should "select a shoes" in {
+
+    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("ul.results-base li.product-base a:nth-child(2)")))
+
+    driver.findElementByCssSelector("li.product-base a:nth-child(2)").click()
+  }
+
+  "user" should "be able to choose the desired size of the selected shoe and then add it to the cart" in {
+
+    driver.findElementByCssSelector("button.size-buttons-size-button.size-buttons-size-button-default").click()
+
+    driver.findElementByCssSelector("button.pdp-add-to-bag.pdp-button").click()
   }
 
 
+  "user" should "search for watches category" in {
 
+    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input.desktop-searchBar")))
+
+    val search: WebElement = driver.findElementByCssSelector("input.desktop-searchBar")
+    search.sendKeys("sunglasses")
+    driver.findElementByCssSelector("a.desktop-submit").click()
+  }
+
+
+  "user" should "select a sunglass" in {
+
+    webdriverwait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("li.product-base a:nth-child(2)")))
+
+    driver.findElementByCssSelector("li.product-base a:nth-child(2)").click()
+  }
+
+  "user" should "be able to add the sunglass to the cart" in {
+
+    driver.findElementByCssSelector("button.pdp-add-to-bag.pdp-button").click()
+
+  }
+
+
+  "user" should "be able to verify the products added to cart" in {
+
+    driver.findElementByCssSelector("a.desktop-cart").click()
+  }
+
+  "user" should "be able to checkout" in {
+
+
+    driver.findElementByCssSelector("div.order-total.footer div.place-order.b-white button.btn.primary-btn.btn-continue.m-button.clickable").click()
+
+    driver.findElementByCssSelector("input.pincode").sendKeys("110091")
+
+    driver.findElementById("locality").click()
+    Thread.sleep(3000)
+    driver.findElementById("locality").sendKeys("Patparganj")
+
+
+    driver.findElementByCssSelector("input.locality").click()
+
+    driver.findElementByCssSelector("input.name").sendKeys("mahesh")
+
+    driver.findElementByCssSelector("textarea.address").sendKeys("Block No 1 House No 135 KP Colony")
+    driver.findElementByCssSelector("input.mobile").sendKeys("9716650498")
+
+    driver.findElementByCssSelector("button.green-button.submit.clickable").click()
+  }
 }

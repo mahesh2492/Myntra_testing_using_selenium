@@ -1,0 +1,43 @@
+[0m[[0minfo[0m] [0m[32mCreateCustomTest:[0m[0m
+[0m[[0minfo[0m] [0m[32mA user[0m[0m
+[0m[[0minfo[0m] [0m[32m- should visit on myntra.com[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should fail to login with invalid credentials[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should logged in[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should select a Sports Shoes category[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should select a shoes[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to choose the desired size of the selected shoe and then add it to the cart[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should search for watches category[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should select a sunglass[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to add the sunglass to the cart[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[32m- should be able to verify the products added to cart[0m[0m
+[0m[[0minfo[0m] [0m[32muser[0m[0m
+[0m[[0minfo[0m] [0m[31m- should be able to checkout *** FAILED ***[0m[0m
+[0m[[0minfo[0m] [0m[31m  org.openqa.selenium.ElementNotVisibleException: element not visible[0m[0m
+[0m[[0minfo[0m] [0m[31m  (Session info: chrome=56.0.2924.87)[0m[0m
+[0m[[0minfo[0m] [0m[31m  (Driver info: chromedriver=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f),platform=Linux 4.4.0-66-generic x86_64) (WARNING: The server did not provide any stacktrace information)[0m[0m
+[0m[[0minfo[0m] [0m[31mCommand duration or timeout: 38 milliseconds[0m[0m
+[0m[[0minfo[0m] [0m[31mBuild info: version: '3.0.1', revision: '1969d75', time: '2016-10-18 09:49:13 -0700'[0m[0m
+[0m[[0minfo[0m] [0m[31mSystem info: host: 'knoldus', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-66-generic', java.version: '1.8.0_121'[0m[0m
+[0m[[0minfo[0m] [0m[31mDriver info: org.openqa.selenium.chrome.ChromeDriver[0m[0m
+[0m[[0minfo[0m] [0m[31mCapabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.28.455506 (18f6627e265f442aeec9b6661a49fe819aeeea1f), userDataDir=/tmp/.org.chromium.Chromium.fiKA5v}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=56.0.2924.87, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}][0m[0m
+[0m[[0minfo[0m] [0m[31mSession ID: ae355dd799c80bf1fcfa8a68bd8c19cb[0m[0m
+[0m[[0minfo[0m] [0m[31m  at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at java.lang.reflect.Constructor.newInstance(Constructor.java:423)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:98)[0m[0m
+[0m[[0minfo[0m] [0m[31m  at Selenium.CreateCustomTest.$anonfun$new$11(CreateCustomTest.scala:119)[0m[0m
+[0m[[0minfo[0m] [0m[31m  ...[0m[0m
